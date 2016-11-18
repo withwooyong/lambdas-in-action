@@ -3,7 +3,8 @@ package lambdasinaction.chap3;
 import java.util.*;
 
 public class Lambdas {
-	public static void main(String ...args){
+	
+	public void main(String ...args){
 
 		// Simple example
 		Runnable r = () -> System.out.println("Hello!");
@@ -24,15 +25,15 @@ public class Lambdas {
 		System.out.println(inventory);
 	}
 
-	public static List<Apple> filter(List<Apple> inventory, ApplePredicate p){
+	public static List<Apple> filter(List<Apple> inventory, ApplePredicate p) {
 		List<Apple> result = new ArrayList<>();
-		for(Apple apple : inventory){
-			if(p.test(apple)){
+		for (Apple apple : inventory) {
+			if (p.test(apple)) {
 				result.add(apple);
 			}
 		}
 		return result;
-	}   
+	}
 
 	public static class Apple {
 		private int weight = 0;
